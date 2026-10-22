@@ -33,6 +33,22 @@ from rarecare.data.synthetic_data import (
 from rarecare.data.preset_notes import PRESET_CLINICAL_NOTES
 from rarecare.note_structurer.extractor import extract_structured_note
 from rarecare.note_structurer.schemas import ExtractionResult, StructuredClinicalNote
+
+import os
+
+print("APP PATH:", os.path.abspath(__file__))
+print("ROOT CONTENTS:", os.listdir("."))
+print("RARECARE CONTENTS:", os.listdir("rarecare"))
+print(
+    "FEDERATED EXISTS:",
+    os.path.isdir("rarecare/federated")
+)
+if os.path.isdir("rarecare/federated"):
+    print(
+        "FEDERATED FILES:",
+        os.listdir("rarecare/federated")
+    )
+
 from rarecare.federated.model import FederatedSoftmaxClassifier
 from rarecare.federated.client import HospitalClient
 from rarecare.federated.server import CentralFederatedServer, FederationHistory
