@@ -380,7 +380,6 @@ UNSTRUCTURED SYNTHETIC NOTE:
             contents=prompt,
             config=types.GenerateContentConfig(
             response_mime_type="application/json",
-            temperature=0.1,
             ),
         )
 
