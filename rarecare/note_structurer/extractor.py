@@ -368,6 +368,16 @@ OUTPUT_JSON_SCHEMA = json.dumps(
     indent=2
 )
 
+prompt = f"""
+Extract structured healthcare information from this synthetic clinical note.
+
+Return valid JSON matching this schema:
+{OUTPUT_JSON_SCHEMA}
+
+Clinical note:
+{note_text}
+"""
+
 UNSTRUCTURED SYNTHETIC NOTE:
 \"\"\"{cleaned_text}\"\"\"
 """
@@ -381,6 +391,11 @@ UNSTRUCTURED SYNTHETIC NOTE:
             ),
         )
 
+        OUTPUT_JSON_SCHEMA = json.dumps(
+        StructuredClinicalNote.model_json_schema(),
+        indent=2
+        )
+        
         raw_text = response.text
         parsed_dict = json.loads(raw_text)
         structured_data = StructuredClinicalNote.model_validate(parsed_dict)
