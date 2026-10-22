@@ -84,7 +84,7 @@ HOSPITAL_PROFILES: Dict[str, Dict[str, Any]] = {
 }
 
 # GenAI Settings
-DEFAULT_GEMINI_MODEL: str = os.getenv("GEMINI_MODEL", "ggemini-3.1-flash-lite")
+DEFAULT_GEMINI_MODEL: str = os.getenv("GEMINI_MODEL", "gemini-3.1-flash-lite")
 
 def get_gemini_api_key() -> str:
     """
