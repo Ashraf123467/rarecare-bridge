@@ -1,0 +1,13 @@
+[
+  "tests/test_federated.py::test_fedavg_mathematical_aggregation",
+  "tests/test_federated.py::test_federated_simulation_and_metrics_calculation",
+  "tests/test_federated.py::test_privacy_preservation_boundary",
+  "tests/test_federated.py::test_softmax_classifier_training_and_shapes",
+  "tests/test_note_structurer.py::test_demo_mode_custom_note_parsing",
+  "tests/test_note_structurer.py::test_demo_mode_preset_notes",
+  "tests/test_note_structurer.py::test_validation_empty_note",
+  "tests/test_note_structurer.py::test_validation_short_note",
+  "tests/test_synthetic_data.py::test_global_test_dataset_balanced",
+  "tests/test_synthetic_data.py::test_hospital_dataset_structure",
+  "tests/test_synthetic_data.py::test_non_iid_distribution_skew"
+]
