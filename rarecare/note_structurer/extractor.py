@@ -342,6 +342,11 @@ def extract_structured_note(
 
         client = genai.Client(api_key=effective_key)
 
+        output_json_schema = json.dumps(
+            StructuredClinicalNote.model_json_schema(),
+            indent=2
+        )
+        
         prompt = f"""
 You are an expert clinical informatics specialist in rare diseases.
 Your task is to analyze the following SYNTHETIC unstructured medical note and extract structured clinical entities.
@@ -361,12 +366,9 @@ CRITICAL INSTRUCTIONS:
   * genetic_variant_score (normal ~0.2, pathogenic >3.0)
 
 - Return valid JSON matching this schema:
-{OUTPUT_JSON_SCHEMA}
+{output_json_schema}
 
-OUTPUT_JSON_SCHEMA = json.dumps(
-    StructuredClinicalNote.model_json_schema(),
-    indent=2
-)
+
 
 
 UNSTRUCTURED SYNTHETIC NOTE:
