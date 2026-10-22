@@ -1,3 +1,5 @@
+from rarecare.config import get_gemini_api_key, DEFAULT_GEMINI_MODEL
+DEFAULT_GEMINI_MODEL = "gemini-2.5-flash"
 
 def extract_structured_note(
     note_text: str,
