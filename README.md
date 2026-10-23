@@ -1,9 +1,7 @@
 # 🩺 RareCare Bridge
 
 > **Privacy-Preserving Federated Healthcare Intelligence for Rare Diseases**  
-> *PromptWars MVP Demonstration*
-
-[Live Demo](https://rarecare-bridge.streamlit.app/)
+> [*PromptWars MVP Demonstration*](https://rarecare-bridge.streamlit.app/)
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![Google GenAI](https://img.shields.io/badge/Google%20GenAI-Official%20SDK-0D9488.svg)](https://github.com/google-gemini/generative-ai-python)
